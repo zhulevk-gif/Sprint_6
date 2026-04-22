@@ -36,3 +36,11 @@ class MainPage(BasePage):
     @allure.step("Нажать логотип Яндекса")
     def click_yandex_logo(self):
         self.click(MainPageLocators.YANDEX_LOGO)
+
+    @allure.step("Проверить, что открыта главная страница Самоката")
+    def is_on_main_page(self):
+        return "/order" not in self.driver.current_url
+
+    @allure.step("Проверить, что открылась страница Дзена")
+    def is_dzen_opened(self):
+        return "dzen.ru" in self.driver.current_url or "ya.ru" in self.driver.current_url

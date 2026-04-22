@@ -1,6 +1,8 @@
 from locators import MainPageLocators
 
 
+BASE_URL = "https://qa-scooter.praktikum-services.ru/"
+
 FAQ_DATA = [
     (
         MainPageLocators.FAQ_QUESTION_0,
